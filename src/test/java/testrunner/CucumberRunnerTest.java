@@ -10,5 +10,5 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions"},
         plugin = {"pretty"})
 
-public class Runner {
+public class CucumberRunnerTest {
 }
