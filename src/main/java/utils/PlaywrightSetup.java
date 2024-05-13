@@ -14,6 +14,7 @@ public class PlaywrightSetup {
     private Browser browser;
 
     public PlaywrightSetup() {
+        // todo: optimize
         playwright = Playwright.create();
         setupBrowserWithContext();
         page = browserContext.newPage();
@@ -21,7 +22,7 @@ public class PlaywrightSetup {
 
     private void setupBrowserWithContext() {
         // todo: different browsers
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         browserContext = browser.newContext();
     }
 

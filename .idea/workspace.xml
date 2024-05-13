@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3ee8845c-8988-474a-b1c7-2c3a40a31ddd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PlaywrightSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PlaywrightSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testrunner/CucumberRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testrunner/CucumberRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,12 +189,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utils/PlaywrightSetup.java</url>
-          <line>16</line>
+          <line>17</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/utils/PlaywrightSetup.java</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
