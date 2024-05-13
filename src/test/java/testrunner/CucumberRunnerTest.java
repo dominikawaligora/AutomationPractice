@@ -9,6 +9,6 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features",
         glue = {"stepdefinitions"},
         plugin = {"pretty"})
-
 public class CucumberRunnerTest {
+
 }
