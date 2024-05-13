@@ -6,9 +6,11 @@ import com.microsoft.playwright.Page;
 public class LoginPage extends PageObject {
 
     private static final String emailInputLocator = "input[id=\"email\"]";
+    private static final String newEmailInputLocator = "input[id=\"email_create\"]";
     private static final String passwordInputLocator = "input[id=\"passwd\"]";
     private static final String signInButtonLocator = "button[id=\"SubmitLogin\"]";
     private static final String signOutButtonLocator = "a[class=\"logout\"]";
+    private static final String createButtonLocator = "button[id=\"SubmitCreate\"]";
     private static final String customerAccountLocator = "a[class=\"account\"]";
 
     public LoginPage(Page page) {
@@ -17,6 +19,10 @@ public class LoginPage extends PageObject {
 
     public void enterUserEmail(String email) {
         page.locator(emailInputLocator).fill(email);
+    }
+
+    public void enterNewEmail(String email) {
+        page.locator(newEmailInputLocator).fill(email);
     }
 
     public void enterUserPassword(String password) {
@@ -34,6 +40,10 @@ public class LoginPage extends PageObject {
     public Locator getSignOutButton() {
         return page.locator(signOutButtonLocator);
     }
+    public void clickOnCreateButton() {
+        page.locator(createButtonLocator).click();
+    }
+
 
     public Locator getUserName() {
         return page.locator(customerAccountLocator);
@@ -45,9 +55,13 @@ public class LoginPage extends PageObject {
         clickOnSignInButton();
     }
 
-
-    public Locator getError(String errorText) {
+    public void createAccount(String userName) {
+        enterNewEmail(userName);
+        clickOnCreateButton();
+    }
+    public Locator getLoginError(String errorText) {
         return page.getByText(errorText);
     }
+
 
 }

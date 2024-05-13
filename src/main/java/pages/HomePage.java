@@ -18,5 +18,4 @@ public class HomePage extends PageObject{
         page.locator(signInLocator).click();
         return new LoginPage(page);
     }
-
 }

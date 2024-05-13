@@ -8,11 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = {"stepdefinitions"},
-        //tags = "@smoke",
-        // todo: report with date
-        plugin = { "pretty", "html:target/cucumber-report.html"},
-        monochrome = true )
-
-public class CucumberRunnerTest {
-
-}
+        plugin = {"pretty", "html:target/cucumber-report.html"},
+        monochrome = true)
+public class CucumberRunnerTest { }

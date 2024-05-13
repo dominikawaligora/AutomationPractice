@@ -24,5 +24,6 @@ Feature: Login
       | username      | password     | message                    |
       | fake@fake.com | fakepassword | Authentication failed.     |
       |               | fakepassword | An email address required. |
-      | fake@fake.com |              | Password is required.         |
+      | fake@fake.com |              | Password is required.      |
+      | fakefake.com  | fakepassword | Invalid email address.     |
 

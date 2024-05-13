@@ -11,7 +11,7 @@ import utils.PlaywrightSetup;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static utils.Properties.*;
 
-public class LoginSteps extends StepDefinition{
+public class LoginSteps extends StepDefinition {
     HomePage homePage;
     LoginPage loginPage;
 
@@ -27,18 +27,27 @@ public class LoginSteps extends StepDefinition{
 
     @Given("User clicks on Sign in button")
     public void clickOnSignIn() {
-       loginPage = homePage.clickOnSignIn();
+        loginPage = homePage.clickOnSignIn();
     }
 
     @When("User signs in with valid credentials")
     public void signInWithValidCredentials() {
-       loginPage.logIn(USER_EMAIL,Credentials.decrypt(ENCODED_USER_PASSWORD) );
-
+        loginPage.logIn(USER_EMAIL, Credentials.decrypt(ENCODED_USER_PASSWORD));
     }
 
     @When("User tries to login with {string} username and {string} password")
     public void signIn(String username, String password) {
-        loginPage.logIn(username,password);
+        loginPage.logIn(username, password);
+    }
+
+    @When("User tries to create an account with {string} email")
+    public void createAccount(String email) {
+        loginPage.createAccount(email);
+    }
+
+    @When("User tries to create an account with exiting email")
+    public void createAccountWithExitisingEmail() {
+        loginPage.createAccount(USER_EMAIL);
     }
 
     @Then("Sign out button is visible")
@@ -53,11 +62,11 @@ public class LoginSteps extends StepDefinition{
 
     @Then("Error message {string} should be visible")
     public void validateIfErrorMessageIsDisplayed(String expectedErrorMessage) {
-        assertThat(loginPage.getError(expectedErrorMessage)).isVisible();
+        assertThat(loginPage.getLoginError(expectedErrorMessage)).isVisible();
     }
 
     @Then("User signs out")
-    public void signOut(){
+    public void signOut() {
         loginPage.clickOnSignOutButton();
     }
 
