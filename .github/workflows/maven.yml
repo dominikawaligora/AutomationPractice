@@ -12,6 +12,9 @@ jobs:
       image: mcr.microsoft.com/playwright/java:v1.43.0-jammy
     steps:
       - uses: actions/checkout@v4
+      - uses: sidharthv96/playwright-report-action
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
