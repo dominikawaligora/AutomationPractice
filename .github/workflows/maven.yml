@@ -13,6 +13,5 @@ jobs:
     - uses: actions/setup-java@v4
       with:
         java-version: '21'
-        distribution: 'temurin'  
-    - name: Run the Maven verify phase
-      run: mvn clean
+    - name: Run the Maven tests
+      run: mvn test
