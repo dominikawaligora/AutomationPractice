@@ -40,6 +40,11 @@ public class LoginSteps extends StepDefinition {
         loginPage.logIn(username, password);
     }
 
+    @When("User tries to login with valid username and {string} password")
+    public void signIn( String password) {
+        loginPage.logIn(USER_EMAIL, password);
+    }
+
     @When("User tries to create an account with {string} email")
     public void createAccount(String email) {
         loginPage.createAccount(email);
