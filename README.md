@@ -33,3 +33,6 @@ To run the tests you can use the `mvn test` command
 
 ## Test reports
 To generate test reports in HTML format, Cucumber's HTML reporting plugin was integrated into the test framework. The plugin can be configured in the Cucumber options (`CucumberRunnerTest.java` class), specifying the output directory as "target" and the desired file name. After test execution, Cucumber generates an HTML report containing detailed test results, accessible at the specified location.
+
+## GitHub Actions
+A GitHub Actions Maven workflow, triggered by a Git push event, executes in a containerized environment. Utilizing Maven for build automation, the workflow orchestrates the test suite's execution and integrates a plugin to generate HTML test reports. Upon completion, the workflow uploads the HTML report as an artifact, enabling easy download for comprehensive test analysis.
