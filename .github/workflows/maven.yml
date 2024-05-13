@@ -16,5 +16,9 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
-    - name: Run the Maven tests
-      run: mvn test
+    - name: Install dependencies
+      run: npm ci
+    - name: Run your tests
+      run: npx playwright test
+      env:
+        HOME: /root
