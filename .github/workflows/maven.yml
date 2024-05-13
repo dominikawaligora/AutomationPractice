@@ -8,6 +8,8 @@ jobs:
   playwright:
     name: 'Playwright Tests run by mvn'
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.44.0-jammy
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-java@v4
